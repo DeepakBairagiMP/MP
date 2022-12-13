@@ -1,0 +1,245 @@
+{
+	"info": {
+		"_postman_id": "2af64008-83f9-4b43-88b7-0c0ffa305b4a",
+		"name": "BMC API Testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20729328"
+	},
+	"item": [
+		{
+			"name": "Post for create booking",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {},
+				"strictSSL": false
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJpbnRlcm5hbF9jbGllbnQiLCJqdGkiOiIzZmY2YzY3NDdhNTZiZDY3NzkyNjUyOWFkMTFkZDdhZjlkM2RhMDcyMDVhYzRjNTZiNzEzOTNhNzNiYTZkZDQyMTZlZTdiMWQ1ZDU0ODZhMSIsImlhdCI6MTY2NjI2NDg0MC43NDQxNzEsIm5iZiI6MTY2NjI2NDg0MC43NDQxNzcsImV4cCI6MTY2NjI2NTc0MC43MTg5OCwic3ViIjoid2Nic3wzOGEzMzQ4ZC1jYjAyLTQ0MjYtYjM1OC05ODFkYjkwNmQyZTEiLCJzY29wZXMiOlsiKnwqIl19.go7O1bN-gkqkrbcv2y28T7gU31Jl3tVSFrUIchNeDrdEDDmlr2bYLTGFODDASgbRnryRvVbEBdOrZqOT0iU2IKxS9WUJxOCYs0Y-uejchbogFEYeLF9y32ZNfZtJDOi75WnpqXxjo-TIobMe-h_a98eQVJnMI5AYUAMOIBjlZSjNmehNxwsrHMTE0UXVg_BlTSsCbMVUQlDMGInDxq6FqGOzPnXEBgX649VQyLS0yGkCbXg51YjNOxZctFhhJH4bodgmRu-wqFbuCjkRdGgwsJR7PewlWTimkNFweIqP6KIZKLZElql9EYQ2sPrU_v3-IZHvLeN5YcM_ZdCcHpTETg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "realm",
+						"value": "xfe001z",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\": \"JimJohn\",\r\n    \"lastname\": \"Brown\",\r\n    \"totalprice\": 111,\r\n    \"depositpaid\": true,\r\n    \"bookingdates\": {\r\n        \"checkin\": \"2018-01-01\",\r\n        \"checkout\": \"2019-01-01\"\r\n    },\r\n    \"additionalneeds\": \"Breakfast\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "https://restful-booker.herokuapp.com/booking",
+					"protocol": "https",
+					"host": [
+						"restful-booker",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"booking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put for update booking",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {},
+				"strictSSL": false
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJpbnRlcm5hbF9jbGllbnQiLCJqdGkiOiIzZmY2YzY3NDdhNTZiZDY3NzkyNjUyOWFkMTFkZDdhZjlkM2RhMDcyMDVhYzRjNTZiNzEzOTNhNzNiYTZkZDQyMTZlZTdiMWQ1ZDU0ODZhMSIsImlhdCI6MTY2NjI2NDg0MC43NDQxNzEsIm5iZiI6MTY2NjI2NDg0MC43NDQxNzcsImV4cCI6MTY2NjI2NTc0MC43MTg5OCwic3ViIjoid2Nic3wzOGEzMzQ4ZC1jYjAyLTQ0MjYtYjM1OC05ODFkYjkwNmQyZTEiLCJzY29wZXMiOlsiKnwqIl19.go7O1bN-gkqkrbcv2y28T7gU31Jl3tVSFrUIchNeDrdEDDmlr2bYLTGFODDASgbRnryRvVbEBdOrZqOT0iU2IKxS9WUJxOCYs0Y-uejchbogFEYeLF9y32ZNfZtJDOi75WnpqXxjo-TIobMe-h_a98eQVJnMI5AYUAMOIBjlZSjNmehNxwsrHMTE0UXVg_BlTSsCbMVUQlDMGInDxq6FqGOzPnXEBgX649VQyLS0yGkCbXg51YjNOxZctFhhJH4bodgmRu-wqFbuCjkRdGgwsJR7PewlWTimkNFweIqP6KIZKLZElql9EYQ2sPrU_v3-IZHvLeN5YcM_ZdCcHpTETg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "realm",
+						"value": "xfe001z",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\": \"Lever\",\r\n    \"lastname\": \"dada\" \r\n}\r\n"
+				},
+				"url": {
+					"raw": "https://restful-booker.herokuapp.com/booking/23402",
+					"protocol": "https",
+					"host": [
+						"restful-booker",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"booking",
+						"23402"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get booking",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {},
+				"strictSSL": false
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJjbGllbnQiLCJqdGkiOiJhNDM5M2ZlZTVlZDljMjM3Y2ExNzA0NzBmMTIyZGU1MzZhYTY0MmRjMjc0MjVmM2YwZDk3MWVkNTE1MDE2ZjM3MGZkNGVhYTlhMzMyMjRkOSIsImlhdCI6MTY2NjI2NDE3MC4zMDA3MjgsIm5iZiI6MTY2NjI2NDE3MC4zMDA3MywiZXhwIjoxNjY2MjY1MDcwLjIyOTc4Niwic3ViIjoiOTM2Iiwic2NvcGVzIjpbInhkdjAwMXl8KiJdfQ.bs-jVmL6c4Ejjq9f8qq-vAq3MkAtRfLhEtaYf6rjiWinqESKSJUB2Q_seejKL2PKXGEs-6bKotrO4ru15UPwxBj9obGIT6fKuMprRh1Lr6wzd1CweyGWbZ4NsCiPriwoZuJkT1RSj_pSqg2Oocn7NTeMkgkSIcBLNxUbR0wQsGZe3ku0PSqyGfCWU55kK5pjQF2ZMQeJqkBi9wmDPSNLkwkRge2dkpbe7pGGIGPrTfY20gNwoKpdDt4ZBcrZyglqJaKkW7iYzCBD2Tkj30-qNY5jHIuoyfcvXh4SuwX8F97aFgVTTa-eZT5XmCU7sYduwvMkqO0fwwLvUpGfKrjGnw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "realm",
+						"value": "xfe002y",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://restful-booker.herokuapp.com/booking/23402",
+					"protocol": "https",
+					"host": [
+						"restful-booker",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"booking",
+						"23402"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete booking",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {},
+				"strictSSL": false
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJjbGllbnQiLCJqdGkiOiJhNDM5M2ZlZTVlZDljMjM3Y2ExNzA0NzBmMTIyZGU1MzZhYTY0MmRjMjc0MjVmM2YwZDk3MWVkNTE1MDE2ZjM3MGZkNGVhYTlhMzMyMjRkOSIsImlhdCI6MTY2NjI2NDE3MC4zMDA3MjgsIm5iZiI6MTY2NjI2NDE3MC4zMDA3MywiZXhwIjoxNjY2MjY1MDcwLjIyOTc4Niwic3ViIjoiOTM2Iiwic2NvcGVzIjpbInhkdjAwMXl8KiJdfQ.bs-jVmL6c4Ejjq9f8qq-vAq3MkAtRfLhEtaYf6rjiWinqESKSJUB2Q_seejKL2PKXGEs-6bKotrO4ru15UPwxBj9obGIT6fKuMprRh1Lr6wzd1CweyGWbZ4NsCiPriwoZuJkT1RSj_pSqg2Oocn7NTeMkgkSIcBLNxUbR0wQsGZe3ku0PSqyGfCWU55kK5pjQF2ZMQeJqkBi9wmDPSNLkwkRge2dkpbe7pGGIGPrTfY20gNwoKpdDt4ZBcrZyglqJaKkW7iYzCBD2Tkj30-qNY5jHIuoyfcvXh4SuwX8F97aFgVTTa-eZT5XmCU7sYduwvMkqO0fwwLvUpGfKrjGnw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "realm",
+						"value": "xfe002y",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://restful-booker.herokuapp.com/booking/23402",
+					"protocol": "https",
+					"host": [
+						"restful-booker",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"booking",
+						"23402"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
